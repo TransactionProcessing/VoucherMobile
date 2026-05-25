@@ -4,19 +4,21 @@ VoucherMobile is a non customer-facing application for voucher providers to vali
 
 ## Implemented scope
 
-This repository contains the core .NET MVVM application logic for voucher-provider workflows:
+This repository contains:
 
-- Secure provider login via `LoginViewModel`
-- Voucher lookup (scan code input) and detail retrieval
-- Voucher expiry checks and remaining balance visibility
-- Partial and full voucher redemption
-- Transaction detail submission for redemption
-- Customer receipt dispatch through a receipt service abstraction
-
-## Structure
-
-- `VoucherMobile.Core` - Domain models, services, and MVVM view models
-- `VoucherMobile.Core.Tests` - Focused xUnit tests for login, expiry handling, redemption, and receipts
+- **VoucherMobile.Core**: Domain models, services, and MVVM view models for:
+  - secure provider login
+  - voucher lookup and detail retrieval
+  - expiry checks and remaining balance visibility
+  - partial/full redemption
+  - transaction detail submission
+  - customer receipt dispatch abstraction
+- **VoucherMobile.App**: .NET MAUI UI elements that bind to the core MVVM workflows:
+  - login form
+  - voucher load/scan input
+  - voucher detail display
+  - redemption form and result/status output
+- **VoucherMobile.Core.Tests**: Focused xUnit tests for login, expiry handling, redemption, and receipts.
 
 ## Build and test
 

@@ -1,41 +1,47 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="VoucherMobile.App.MainPage">
-			 
+             x:Class="VoucherMobile.App.MainPage"
+             Title="Voucher Validation">
     <ScrollView>
-        <VerticalStackLayout 
-            Spacing="25" 
-            Padding="30,0" 
-            VerticalOptions="Center">
+        <VerticalStackLayout Padding="20" Spacing="16">
+            <Label Text="Voucher Provider Portal"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   SemanticProperties.HeadingLevel="Level1" />
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-                
-            <Label 
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-            
-            <Label 
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+            <Frame Padding="12" BorderColor="LightGray">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="1) Secure Login" FontAttributes="Bold" />
+                    <Entry Placeholder="Username" Text="{Binding Login.Username}" />
+                    <Entry Placeholder="Password" IsPassword="True" Text="{Binding Login.Password}" />
+                    <Button Text="Log In" Clicked="OnLoginClicked" />
+                    <Label Text="{Binding Login.StatusMessage}" FontSize="12" />
+                </VerticalStackLayout>
+            </Frame>
 
-            <Button 
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+            <Frame Padding="12" BorderColor="LightGray">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="2) Scan / Enter Voucher" FontAttributes="Bold" />
+                    <Entry Placeholder="Voucher Code" Text="{Binding Redemption.VoucherCode}" />
+                    <Button Text="Load Voucher" Clicked="OnLoadVoucherClicked" />
+                    <Label Text="{Binding Redemption.StatusMessage}" FontSize="12" />
+                    <Label Text="{Binding Redemption.CurrentVoucher.VoucherCode, StringFormat='Code: {0}'}" />
+                    <Label Text="{Binding Redemption.CurrentVoucher.RemainingBalance, StringFormat='Remaining: {0:0.00}'}" />
+                    <Label Text="{Binding Redemption.CurrentVoucher.ExpiryDateUtc, StringFormat='Expiry (UTC): {0:yyyy-MM-dd HH:mm}'}" />
+                </VerticalStackLayout>
+            </Frame>
 
+            <Frame Padding="12" BorderColor="LightGray">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="3) Redeem Voucher" FontAttributes="Bold" />
+                    <Entry Placeholder="Merchant ID" Text="{Binding Redemption.MerchantId}" />
+                    <Entry Placeholder="Transaction Reference" Text="{Binding Redemption.TransactionReference}" />
+                    <Entry Placeholder="Amount" Keyboard="Numeric" Text="{Binding Redemption.RedemptionAmount}" />
+                    <Button Text="Redeem" Clicked="OnRedeemClicked" />
+                    <Label Text="{Binding Redemption.StatusMessage}" FontAttributes="Bold" />
+                </VerticalStackLayout>
+            </Frame>
         </VerticalStackLayout>
     </ScrollView>
- 
 </ContentPage>

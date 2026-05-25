@@ -1,24 +1,30 @@
-﻿namespace VoucherMobile.App;
+using VoucherMobile.App.ViewModels;
+
+namespace VoucherMobile.App;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+    private readonly MainPageViewModel _viewModel;
 
-	public MainPage()
-	{
-		InitializeComponent();
-	}
+    public MainPage()
+    {
+        InitializeComponent();
+        _viewModel = new MainPageViewModel();
+        BindingContext = _viewModel;
+    }
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
+    private async void OnLoginClicked(object sender, EventArgs e)
+    {
+        await _viewModel.Login.LoginAsync();
+    }
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
+    private async void OnLoadVoucherClicked(object sender, EventArgs e)
+    {
+        await _viewModel.Redemption.ScanVoucherAsync();
+    }
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+    private async void OnRedeemClicked(object sender, EventArgs e)
+    {
+        await _viewModel.Redemption.RedeemAsync();
+    }
 }
-
