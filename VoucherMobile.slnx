@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="VoucherMobile.App/VoucherMobile.App.csproj" />
+  <Project Path="VoucherMobile.BusinessLogic.Tests/VoucherMobile.BusinessLogic.Tests.csproj" />
+  <Project Path="VoucherMobile.BusinessLogic/VoucherMobile.BusinessLogic.csproj" />
+</Solution>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VoucherMobile.App.Pages.AppHome.HomePage"
+             Title="Home">
+    <ScrollView>
+        <VerticalStackLayout Padding="24,48"
+                             Spacing="20">
+            <Label x:Name="WelcomeLabel"
+                   Text="Welcome"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="{DynamicResource labelTextColor}" />
+
+            <Frame Style="{StaticResource HomeCardFrame}">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Skeleton application"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="{DynamicResource labelTextColor}" />
+                    <Label Text="The app is wired for a basic login-only journey. Additional voucher workflows can be added on top of this structure next."
+                           FontSize="14"
+                           TextColor="{DynamicResource labelTextColor}" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Sign Out"
+                    Clicked="OnSignOutClicked"
+                    Style="{StaticResource StandardButton}"
+                    HeightRequest="48" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

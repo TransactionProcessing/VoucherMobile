@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="VoucherMobile.App.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:appHome="clr-namespace:VoucherMobile.App.Pages.AppHome"
+    xmlns:pages="clr-namespace:VoucherMobile.App.Pages"
+    Title="VoucherMobile"
+    Shell.FlyoutBehavior="Disabled">
+
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate pages:LoginPage}"
+        Route="login"
+        Shell.NavBarIsVisible="False"
+        Shell.TabBarIsVisible="False" />
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate appHome:HomePage}"
+        Route="home"
+        Shell.TabBarIsVisible="False" />
+
+</Shell>

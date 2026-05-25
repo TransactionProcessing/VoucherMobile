@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="VoucherMobile.App.Resources.Styles.LightTheme">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Colors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Color x:Key="pageBackgroundColor">#FFFFFF</Color>
+    <Color x:Key="textColor">#E5E9F0</Color>
+    <Color x:Key="labelTextColor">#4267B2</Color>
+    <Color x:Key="labelLightTextColor">#FFFFFF</Color>
+    <Color x:Key="entryTextColor">#4267B2</Color>
+    <Color x:Key="entryPlaceHolderColor">#A0FFFFFF</Color>
+    <Color x:Key="entryPlaceHolderColorDark">#4267B2</Color>
+    <Color x:Key="buttonTextColor">#FFFFFF</Color>
+    <Color x:Key="primary">#4267B2</Color>
+    <Color x:Key="brandGradientEndColor">#2B4A8C</Color>
+    <Color x:Key="transactions">#31C8E3</Color>
+    <Color x:Key="reports">#E38C44</Color>
+    <Color x:Key="profile">#5BE3B6</Color>
+    <Color x:Key="support">#E37188</Color>
+    <Color x:Key="mobileTopup">#7ed321</Color>
+    <Color x:Key="admin">#ff4a4a</Color>
+    <Color x:Key="mobileWallet">#ff844a</Color>
+    <Color x:Key="billPayment">#4acaff</Color>
+    <Color x:Key="voucher">MediumPurple</Color>
+    <Color x:Key="DarkGray">#212125</Color>
+    <Color x:Key="MidGray">#CFCFD3</Color>
+    <Color x:Key="LightGray">#EFEFEF</Color>
+    <Color x:Key="cardBackgroundColor">#FFFFFF</Color>
+    <Color x:Key="cardBorderColor">#E1E1E1</Color>
+    <Color x:Key="entryContainerBorderColor">#CFCFD3</Color>
+    <Color x:Key="entryContainerBackgroundColor">#EFEFEF</Color>
+    <Color x:Key="salesAnalysisCardBackgroundColor">#FFFFFF</Color>
+    <Color x:Key="salesAnalysisCardBorderColor">#E1E1E1</Color>
+    <Color x:Key="shellTabBarBackgroundColor">#FFFFFF</Color>
+    <Color x:Key="shellTabBarForegroundColor">#4267B2</Color>
+    <Color x:Key="shellTabBarUnselectedColor">#212125</Color>
+    <Color x:Key="errorTextColor">#B91C1C</Color>
+
+    <Style TargetType="Page" ApplyToDerivedTypes="True">
+        <Setter Property="BackgroundColor" Value="{DynamicResource pageBackgroundColor}" />
+        <Setter Property="Padding" Value="20,20,20,20" />
+    </Style>
+
+    <Style x:Key="LabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource labelTextColor}" />
+        <Setter Property="FontFamily" Value="OpenSansRegular" />
+    </Style>
+
+    <Style x:Key="StandardButton" TargetType="Button">
+        <Setter Property="TextColor" Value="{DynamicResource buttonTextColor}" />
+        <Setter Property="FontFamily" Value="OpenSansRegular" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource primary}" />
+        <Setter Property="Padding" Value="15,10" />
+        <Setter Property="CornerRadius" Value="20" />
+        <Setter Property="HeightRequest" Value="40" />
+    </Style>
+
+    <Style x:Key="LoginImage" TargetType="Image">
+        <Setter Property="HeightRequest" Value="250" />
+        <Setter Property="WidthRequest" Value="250" />
+    </Style>
+
+    <Style x:Key="LoginFieldLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource labelTextColor}" />
+        <Setter Property="FontFamily" Value="OpenSansRegular" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontAttributes" Value="Bold" />
+    </Style>
+
+    <Style x:Key="LoginEntryContainerFrame" TargetType="Frame">
+        <Setter Property="CornerRadius" Value="12" />
+        <Setter Property="Padding" Value="10,0" />
+        <Setter Property="HasShadow" Value="False" />
+        <Setter Property="BorderColor" Value="{DynamicResource entryContainerBorderColor}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource entryContainerBackgroundColor}" />
+        <Setter Property="Margin" Value="0" />
+    </Style>
+
+    <Style x:Key="LoginEntryCardStyle" TargetType="Entry">
+        <Setter Property="PlaceholderColor" Value="{DynamicResource entryPlaceHolderColorDark}" />
+        <Setter Property="TextColor" Value="{DynamicResource entryTextColor}" />
+        <Setter Property="HeightRequest" Value="45" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="ReturnType" Value="Done" />
+    </Style>
+
+    <Style x:Key="LoginButton" TargetType="Button">
+        <Setter Property="TextColor" Value="{DynamicResource buttonTextColor}" />
+        <Setter Property="FontFamily" Value="OpenSansRegular" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource primary}" />
+        <Setter Property="CornerRadius" Value="25" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="HeightRequest" Value="52" />
+        <Setter Property="HorizontalOptions" Value="Fill" />
+    </Style>
+
+    <Style x:Key="HomeCardFrame" TargetType="Frame">
+        <Setter Property="CornerRadius" Value="16" />
+        <Setter Property="HasShadow" Value="True" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource cardBackgroundColor}" />
+        <Setter Property="Padding" Value="16,20" />
+        <Setter Property="BorderColor" Value="{DynamicResource cardBorderColor}" />
+        <Setter Property="Margin" Value="0" />
+    </Style>
+</ResourceDictionary>
