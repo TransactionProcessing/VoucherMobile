@@ -14,10 +14,10 @@ This repository contains:
   - transaction detail submission
   - customer receipt dispatch abstraction
 - **VoucherMobile.App**: .NET MAUI UI elements that bind to the core MVVM workflows:
-  - login form
-  - voucher load/scan input
-  - voucher detail display
-  - redemption form and result/status output
+  - login screen
+  - voucher lookup screen
+  - redemption screen
+  - voucher detail display and result/status output
 - **VoucherMobile.Core.Tests**: Focused xUnit tests for login, expiry handling, redemption, and receipts.
 
 ## Build and test

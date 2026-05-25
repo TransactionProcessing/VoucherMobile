@@ -1,11 +1,11 @@
 using VoucherMobile.Core.Services;
 using VoucherMobile.Core.ViewModels;
 
-namespace VoucherMobile.App.ViewModels;
+namespace VoucherMobile.App;
 
-public sealed class MainPageViewModel
+public sealed class AppState
 {
-    public MainPageViewModel()
+    public AppState()
     {
         Login = new LoginViewModel(new InMemoryAuthenticationService());
 

@@ -1,31 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="VoucherMobile.App.MainPage"
-             Title="Voucher Validation">
+             x:Class="VoucherMobile.App.RedemptionPage"
+             Title="Redeem">
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="16">
-            <Label Text="Voucher Provider Portal"
+            <Label Text="Redeem Voucher"
                    FontSize="28"
                    FontAttributes="Bold"
                    SemanticProperties.HeadingLevel="Level1" />
 
             <Frame Padding="12" BorderColor="LightGray">
                 <VerticalStackLayout Spacing="8">
-                    <Label Text="1) Secure Login" FontAttributes="Bold" />
-                    <Entry Placeholder="Username" Text="{Binding Login.Username}" />
-                    <Entry Placeholder="Password" IsPassword="True" Text="{Binding Login.Password}" />
-                    <Button Text="Log In" Clicked="OnLoginClicked" />
-                    <Label Text="{Binding Login.StatusMessage}" FontSize="12" />
-                </VerticalStackLayout>
-            </Frame>
-
-            <Frame Padding="12" BorderColor="LightGray">
-                <VerticalStackLayout Spacing="8">
-                    <Label Text="2) Scan / Enter Voucher" FontAttributes="Bold" />
-                    <Entry Placeholder="Voucher Code" Text="{Binding Redemption.VoucherCode}" />
-                    <Button Text="Load Voucher" Clicked="OnLoadVoucherClicked" />
-                    <Label Text="{Binding Redemption.StatusMessage}" FontSize="12" />
+                    <Label Text="Voucher Details" FontAttributes="Bold" />
                     <Label Text="{Binding Redemption.CurrentVoucher.VoucherCode, StringFormat='Code: {0}'}" />
                     <Label Text="{Binding Redemption.CurrentVoucher.RemainingBalance, StringFormat='Remaining: {0:0.00}'}" />
                     <Label Text="{Binding Redemption.CurrentVoucher.ExpiryDateUtc, StringFormat='Expiry (UTC): {0:yyyy-MM-dd HH:mm}'}" />
@@ -34,7 +21,7 @@
 
             <Frame Padding="12" BorderColor="LightGray">
                 <VerticalStackLayout Spacing="8">
-                    <Label Text="3) Redeem Voucher" FontAttributes="Bold" />
+                    <Label Text="Redeem Voucher" FontAttributes="Bold" />
                     <Entry Placeholder="Merchant ID" Text="{Binding Redemption.MerchantId}" />
                     <Entry Placeholder="Transaction Reference" Text="{Binding Redemption.TransactionReference}" />
                     <Entry Placeholder="Amount" Keyboard="Numeric" Text="{Binding Redemption.RedemptionAmount}" />

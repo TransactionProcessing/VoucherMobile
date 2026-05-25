@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VoucherMobile.App.LoginPage"
+             Title="Login">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+            <Label Text="Voucher Provider Portal"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   SemanticProperties.HeadingLevel="Level1" />
+
+            <Frame Padding="12" BorderColor="LightGray">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Secure Login" FontAttributes="Bold" />
+                    <Entry Placeholder="Username" Text="{Binding Login.Username}" />
+                    <Entry Placeholder="Password" IsPassword="True" Text="{Binding Login.Password}" />
+                    <Button Text="Log In" Clicked="OnLoginClicked" />
+                    <Label Text="{Binding Login.StatusMessage}" FontSize="12" />
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
