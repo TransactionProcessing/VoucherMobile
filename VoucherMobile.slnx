@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="VoucherMobile.Core.Tests/VoucherMobile.Core.Tests.csproj" />
+  <Project Path="VoucherMobile.Core/VoucherMobile.Core.csproj" />
+</Solution>
